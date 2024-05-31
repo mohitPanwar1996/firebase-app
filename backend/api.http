@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000/api
+
+### Get Permissions
+GET {{baseUrl}}/users/getPermissions HTTP/1.1
+
+### Create Permissions
+POST {{baseUrl}}/users/createPermission HTTP/1.1
+Content-Type: application/json
+
+{
+    "permission_name":"REPORTS_REPORT2_VIEW",
+    "module":"Report"
+}
+
+### Get Roles
+GET {{baseUrl}}/users/getRoles HTTP/1.1
+
+### Create Roles
+POST {{baseUrl}}/users/createRole HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"",
+    "description":"",
+    "created_by": "",
+    "permissions":[    ]
+}
+
+### Get Users
+GET {{baseUrl}}/users/getUsers HTTP/1.1
+
+### Create Users
+POST {{baseUrl}}/users/createUser HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"",
+    "email_id":"",
+    "role": "",
+    "role_id":""
+}
+
+### Get User Details
+
+GET {{baseUrl}}/users/getUserDetails HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_email": ""
+}
